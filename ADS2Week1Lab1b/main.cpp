@@ -7,9 +7,19 @@
 //
 
 #include <iostream>
+#include "Person.h"
+#include "Employee.h"
+#include "Customer.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    Person *personPtr = new Person("johnny");
+    personPtr->printName();
+    
+    personPtr = new Employee("Graham", 34000.00);
+    personPtr->printName();
+    
+    personPtr = new Customer("charles", "I'd like to make a compliant");
+    personPtr->printName();
     return 0;
 }
