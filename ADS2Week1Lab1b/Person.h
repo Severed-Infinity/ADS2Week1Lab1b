@@ -18,7 +18,10 @@ protected:
     
 public:
     Person(std::string);
-    virtual void printName();
+    virtual void printName() = 0;
+    bool operator > (const Person &rhs);
+    bool operator < (const Person &rhs);
+    bool operator == (const Person &rhs);
 };
 
 #endif /* defined(__ADS2Week1Lab1b__Person__) */
